@@ -17,16 +17,20 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
         cursor: 'pointer',
         gap: '47px',
       }}
+      onClick={() => {
+        setBodyPart(item)
+        window.scrollTo({ top: 1800, left: 100, behavior: 'smooth' })
+      }}
     >
       <img
         src={`../images/icons/${item.replace(/\s/g, '')}.png`}
-        alt="dumbbell"
+        alt={item}
         style={{ width: '60px', height: '60px' }}
       />
       <Typography
         fontSize="24px"
         fontWeight="bold"
-        color="#3a1212"
+        color="#0AB385"
         textTransform="capitalize"
       >
         {item}
